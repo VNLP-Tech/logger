@@ -1,0 +1,23 @@
+{
+  "name": "@vnlp/logger",
+  "version": "0.0.1",
+  "description": "Logger for microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duysmile/logger.git"
+  },
+  "author": "DuyN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duysmile/logger/issues"
+  },
+  "homepage": "https://github.com/duysmile/logger#readme",
+  "dependencies": {
+    "pino": "^7.0.5",
+    "pino-elasticsearch": "^6.2.0"
+  }
+}
