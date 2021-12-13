@@ -12,12 +12,31 @@ Extend from [Pino](https://getpino.io/) and [Pino Elasticsearhc](https://github.
 **Setup ELK:**
 - Installing in Docker: https://github.com/deviantony/docker-elk
 
+**Setup Cloudwatch**
+- Using AWS account, create `aws_access_key_id` and `aws_secret_access_key` in IAM Service
+
 **Setting Logger with service name and other options:**
 ```js
 const logger = new VLogger({
-    service: 'nlp',
-    elasticHost: 'http://127.0.0.1:9200',
+    service: 'elastic-log',
     level: 'debug',
+    // for elk
+    streamType: 'elastic',
+    elastic: {
+        host: 'http://127.0.0.1:9200',
+        username: 'elastic',
+        password: 'changeme',
+    },
+    // for cloudwatch
+    streamType: 'cloudwatch',
+    cloudwatch: {
+        group: 'cw-group',
+        prefix: 'p-log',
+        interval: 1000,
+        awsRegion: '_________',
+        awsAccessKeyId: '________________',
+        awsSecretAccessKey: '________________________________',
+    },
 }).init();
 ```
 
