@@ -1,12 +1,39 @@
 const VLogger = require('..');
 
-const logger = new VLogger({
-    service: 'nlp',
-    elasticHost: 'http://127.0.0.1:9200',
-    elasticUser: 'elastic',
-    elasticPass: 'changeme',
+const loggerElastic = new VLogger({
+    service: 'elastic-log',
+    streamType: 'elastic',
+    elastic: {
+        host: 'http://127.0.0.1:9200',
+        username: 'elastic',
+        password: 'changeme',
+    },
     level: 'debug',
 }).init();
+
+const loggerLocal = new VLogger({
+    service: 'local-log',
+    streamType: 'local',
+    level: 'debug',
+}).init();
+
+const loggerCloudWatch = new VLogger({
+    service: 'cloudwatch-log',
+    streamType: 'cloudwatch',
+    cloudwatch: {
+        group: 'cw-group',
+        prefix: 'p-log',
+        interval: 1000,
+        awsRegion: 'ap-southeast-1',
+        awsAccessKeyId: 'AKIA2RYWKCBBXOTZQI4U',
+        awsSecretAccessKey: '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',
+    },
+    level: 'debug',
+}).init();
+
+// const logger = loggerElastic;
+// const logger = loggerLocal;
+const logger = loggerCloudWatch;
 
 logger.info('Info');
 logger.warn('Warning');

@@ -18,6 +18,7 @@
   "homepage": "https://github.com/duysmile/logger#readme",
   "dependencies": {
     "pino": "^7.0.5",
+    "pino-cloudwatch": "^0.7.0",
     "pino-elasticsearch": "^6.2.0"
   }
 }
