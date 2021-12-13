@@ -5,7 +5,8 @@ Extend from [Pino](https://getpino.io/) and [Pino Elasticsearhc](https://github.
 ### Features
 - Logger in many levels
 - Logger for http request
-- Upload log to ElasticSearch
+- Send log to ElasticSearch
+- Send log to Cloudwatch
 
 ### Setting
 
