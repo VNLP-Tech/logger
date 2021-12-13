@@ -24,9 +24,9 @@ const loggerCloudWatch = new VLogger({
         group: 'cw-group',
         prefix: 'p-log',
         interval: 1000,
-        awsRegion: 'ap-southeast-1',
-        awsAccessKeyId: 'AKIA2RYWKCBBXOTZQI4U',
-        awsSecretAccessKey: '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',
+        awsRegion: '_________',
+        awsAccessKeyId: '________________',
+        awsSecretAccessKey: '________________________________',
     },
     level: 'debug',
 }).init();
