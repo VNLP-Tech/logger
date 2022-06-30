@@ -1,4 +1,4 @@
-# VNLP Logger for microservice
+# Logger for microservice
 
 Extend from [Pino](https://getpino.io/) and [Pino Elasticsearhc](https://github.com/pinojs/pino-elasticsearch)
 
